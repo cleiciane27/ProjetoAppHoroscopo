@@ -45,7 +45,7 @@
     <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JTabbedPane" name="txtPrevisaoAquario">
+    <Container class="javax.swing.JTabbedPane" name="txPrevisaoAquario">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="d1" green="f2" red="f2" type="rgb"/>
@@ -68,7 +68,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="2" y="0" width="1670" height="988"/>
+          <AbsoluteConstraints x="0" y="10" width="1670" height="988"/>
         </Constraint>
       </Constraints>
 
@@ -284,7 +284,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="areaDescobrirSigno1">
+            <Container class="javax.swing.JPanel" name="areaDescobrirSigno">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="4" green="4" red="57" type="rgb"/>
@@ -524,6 +524,9 @@
                       </Border>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDescobrirSignoActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -934,7 +937,7 @@
                 <Component class="javax.swing.JLabel" name="imgSignoAries">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoAppHoroscopo\Horoscopo\src\main\resources\assets\aries.jpg"/>
+                      <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoAppHoroscopo\Horoscopo\src\main\resources\assets\Aries1.jpg"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -1274,7 +1277,6 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
-                        <Property name="text" type="java.lang.String" value="Um bom momento para tomar iniciativa e &#xa;colocar planos em pr&#xe1;tica. &#xa;Evite agir por impulso."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1357,7 +1359,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
-                        <Property name="text" type="java.lang.String" value="Sua coragem pode abrir portas, mas &#xa;a paci&#xea;ncia ajudar&#xe1; voc&#xea; a atravess&#xe1;-las.&#xa;"/>
+                        <Property name="text" type="java.lang.String" value="&#xa;"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1840,7 +1842,6 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
-                        <Property name="text" type="java.lang.String" value="Um dia favor&#xe1;vel para organizar suas prioridades &#xa;e cuidar das coisas que realmente importam."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -2081,7 +2082,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
-                        <Property name="text" type="java.lang.String" value="Nem toda mudan&#xe7;a amea&#xe7;a sua seguran&#xe7;a;&#xa;algumas podem levar voc&#xea; a &#xa;lugares melhores."/>
+                        <Property name="text" type="java.lang.String" value="&#xa;"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -2578,7 +2579,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
-                        <Property name="text" type="java.lang.String" value="Conversas importantes podem trazer novas ideias &#xa;e oportunidades. Esteja aberto para ouvir."/>
+                        <Property name="text" type="java.lang.String" value="&#xa;"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -2816,7 +2817,6 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
-                        <Property name="text" type="java.lang.String" value="Uma boa conversa pode transformar uma ideia simples &#xa;em uma grande oportunidade."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -3322,7 +3322,6 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
-                        <Property name="text" type="java.lang.String" value=" &#xa;&#xa;&#xa; Valorize momentos tranquilos e d&#xea; aten&#xe7;&#xe3;o &#xe0;s &#xa; pessoas que fazem voc&#xea; se sentir bem."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -3798,6 +3797,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="23/07 a 22/08"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfElementoLeao">
@@ -3805,27 +3805,40 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Fogo"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfElementoLeaoActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfPlanetaLeao">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Sol"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfPlanetaLeaoActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfCorLeao">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Dourado"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfCorLeaoActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfNumeroLeao">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -3850,15 +3863,15 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jScrollPane14" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jScrollPane13" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="pfortesLeao" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="pMelhorarLeao" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane14" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -3933,6 +3946,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="Lideran&#xe7;a, criatividade, confian&#xe7;a e &#xa;generosidade.Tem facilidade&#xa;para motivar outras pessoas."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -3948,6 +3962,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="Controlar o orgulho, aceitar cr&#xed;ticas e &#xa;lembrar que ouvir tamb&#xe9;m faz parte da &#xa;lideran&#xe7;a."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -4180,9 +4195,13 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfAmorLeao">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="88%"/>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfTrabalhoLeao">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="94%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -4190,13 +4209,18 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSaudeLeao">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="82%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfSaudeLeaoActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSorteLeao">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="90%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[265, 26]"/>
                     </Property>
@@ -4515,13 +4539,18 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="23/08 a 22/09 "/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfPeriodoVirgemActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfElementoVirgem">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Terra"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfPlanetaVirgem">
@@ -4529,6 +4558,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Merc&#xfa;rio"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfCorVirgem">
@@ -4536,6 +4566,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Azul-marinho"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfNumeroVirgem">
@@ -4543,7 +4574,11 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="5"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfNumeroVirgemActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -4594,9 +4629,9 @@
                           <Component id="tituloCarecteristicasVirgem" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="pfortesVirgem" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane16" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           <Component id="pMelhorarVirgem" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane17" min="-2" max="-2" attributes="0"/>
@@ -4650,6 +4685,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="Organiza&#xe7;&#xe3;o, intelig&#xea;ncia, aten&#xe7;&#xe3;o &#xa;aos detalhes e responsabilidade."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -4665,6 +4701,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="Evitar o perfeccionismo excessivo, &#xa;preocupar-se menos e aceitar que &#xa;nem tudo precisa sair perfeito."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -4897,9 +4934,16 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfAmorVirgem">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="82%"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfAmorVirgemActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfTrabalhoVirgem">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="95%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -4907,6 +4951,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSaudeVirgem">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="84%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -4914,6 +4959,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSorteVirgem">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="78%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[265, 26]"/>
                     </Property>
@@ -5232,6 +5278,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="23/09 a 22/10"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfElementoLibra">
@@ -5239,6 +5286,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Ar"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfPlanetaLibra">
@@ -5246,6 +5294,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="V&#xea;nus"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfCorLibra">
@@ -5253,6 +5302,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Rosa"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfNumeroLibra">
@@ -5260,6 +5310,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="6&#xa;"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -5289,10 +5340,10 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jScrollPane20" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jScrollPane19" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="pfortesLibra" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="pMelhorarLibra" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane20" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -5300,7 +5351,7 @@
                                   <Component id="tituloCarecteristicasLibra" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="35" max="32767" attributes="0"/>
+                          <EmptySpace pref="25" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -5317,7 +5368,7 @@
                           <Component id="pMelhorarLibra" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane20" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="32" max="32767" attributes="0"/>
+                          <EmptySpace pref="20" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -5367,6 +5418,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="Diplomacia, simpatia, criatividade e &#xa;facilidade para encontrar equil&#xed;brio."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -5382,6 +5434,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="Evitar a indecis&#xe3;o, confiar mais nas pr&#xf3;prias&#xa;escolhas e n&#xe3;o tentar agradar todo mundo."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -5614,9 +5667,16 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfAmorLibra">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="94%&#xa;"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfAmorLibraActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfTrabalhoLibra">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="83%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -5624,6 +5684,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSaudeLibra">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="79%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -5631,6 +5692,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSorteLibra">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="86%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[265, 26]"/>
                     </Property>
@@ -5874,7 +5936,7 @@
                 <Component class="javax.swing.JLabel" name="imgSignoEscorpiao">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoAppHoroscopo\Horoscopo\src\main\resources\assets\scorpio.jpg"/>
+                      <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoAppHoroscopo\Horoscopo\src\main\resources\assets\escorpiao1.jpg"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -5949,6 +6011,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="23/10 a 21/11"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfElementoEscorpiao">
@@ -5956,6 +6019,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="&#xc1;gua"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfPlanetaEscorpiao">
@@ -5963,6 +6027,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Plut&#xe3;o"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfCorEscorpiao">
@@ -5970,6 +6035,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Vinho"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfNumeroEscorpiao">
@@ -5977,6 +6043,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="8"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -6084,6 +6151,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="Determina&#xe7;&#xe3;o, intensidade, coragem e &#xa;capacidade de superar obst&#xe1;culos."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -6099,6 +6167,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value=" Evitar guardar ressentimentos, controlar &#xa; o excesso de desconfian&#xe7;a e &#xa; expressar melhor seus sentimentos."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -6331,9 +6400,13 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfAmorEscorpiao">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="91%"/>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfTrabalhoEscorpiao">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="89%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -6341,6 +6414,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSaudeEscorpiao">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="77%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -6348,6 +6422,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSorteEscorpiao">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="84%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[265, 26]"/>
                     </Property>
@@ -6666,6 +6741,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="22/11 a 21/12"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfElementoSagitario">
@@ -6673,6 +6749,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Fogo&#xa;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfPlanetaSagitario">
@@ -6680,6 +6757,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="J&#xfa;piter"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfCorSagitario">
@@ -6687,13 +6765,18 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Roxo"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfCorSagitarioActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfNumeroSagitario">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="3"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -6801,6 +6884,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value=" Otimismo, liberdade, sinceridade, &#xa; aventura e facilidade para enxergar &#xa; novas possibilidades."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -6816,6 +6900,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value=" Pensar antes de falar, ter mais &#xa; responsabilidade com compromissos &#xa; e evitar decis&#xf5;es precipitadas."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -7048,9 +7133,13 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfAmorSagitario">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="86%"/>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfTrabalhoSagitario">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="87%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -7058,6 +7147,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSaudeSagitario">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="90%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -7065,6 +7155,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSorteSagitario">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="93%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[265, 26]"/>
                     </Property>
@@ -7383,6 +7474,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="22/12 a 19/01"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfElementoCapricornio">
@@ -7390,6 +7482,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Terra"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfPlanetaCapricornio">
@@ -7397,6 +7490,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Saturno"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfCorCapricornio">
@@ -7404,6 +7498,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Marrom"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfNumeroCapricornio">
@@ -7411,6 +7506,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="4"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -7518,6 +7614,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="Disciplina, responsabilidade, foco e &#xa;determina&#xe7;&#xe3;o para alcan&#xe7;ar objetivos."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -7533,6 +7630,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value=" Evitar o excesso de cobran&#xe7;a, descansar &#xa; mais e permitir-se aproveitar pequenas &#xa; conquistas."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -7765,9 +7863,13 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfAmorCapricornio">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="78%"/>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfTrabalhoCapricornio">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="96%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -7775,6 +7877,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSaudeCapricornio">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="82%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -7782,6 +7885,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSorteCapricornio">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="80%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[265, 26]"/>
                     </Property>
@@ -7898,7 +8002,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="-240" y="0" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="-240" y="-10" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -8100,6 +8204,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="20/01 a 18/02"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfElementoAquario">
@@ -8107,6 +8212,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Ar"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfPlanetaAquario">
@@ -8114,6 +8220,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Urano"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfCorAquario">
@@ -8121,6 +8228,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Azul"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfNumeroAquario">
@@ -8128,6 +8236,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="7&#xa;"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -8235,6 +8344,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value=" Originalidade, criatividade, &#xa; independ&#xea;ncia e facilidade para &#xa; pensar de maneira diferente."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -8250,6 +8360,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value=" Ter mais paci&#xea;ncia com os outros, &#xa; demonstrar sentimentos e aceitar &#xa; diferentes perspectivas."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -8350,7 +8461,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="sla8">
+                    <Component class="javax.swing.JTextArea" name="txtPrevisaoAquarios">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
@@ -8482,9 +8593,13 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfAmorAquario">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="81%"/>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfTrabalhoAquario">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="92%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -8492,6 +8607,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSaudeAquario">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="76%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
@@ -8499,6 +8615,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfSorteAquario">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="88%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[265, 26]"/>
                     </Property>
@@ -8817,6 +8934,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="19/02 a 20/03"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfElementoPeixes">
@@ -8824,6 +8942,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="&#xc1;gua"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfPlanetaPeixes">
@@ -8831,6 +8950,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Netuno"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfCorPeixes">
@@ -8838,6 +8958,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="Lil&#xe1;s"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfNumeroPeixes">
@@ -8845,6 +8966,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="7&#xa;"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -8952,6 +9074,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value=" Imagina&#xe7;&#xe3;o, empatia, criatividade e &#xa; sensibilidade para compreender outras &#xa; pessoas."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -8967,6 +9090,7 @@
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value=" Evitar fugir dos problemas, estabelecer &#xa; limites e n&#xe3;o deixar que as emo&#xe7;&#xf5;es &#xa; controlem todas as decis&#xf5;es."/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -9199,9 +9323,13 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfAmorPeixes">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="93%"/>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tfTrabalhoPeixes">
                   <Properties>
+                    <Property name="text" type="java.lang.String" value="79%"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[165, 26]"/>
                     </Property>
