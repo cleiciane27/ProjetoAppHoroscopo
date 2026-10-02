@@ -6,7 +6,11 @@ package Interface;
 
 import java.awt.Image;
 import java.time.LocalDate;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,6 +23,12 @@ public class Signos extends javax.swing.JFrame {
     /**
      * Creates new form Signos
      */
+    
+    //Criando a variavel para guardar a MUSICA
+    Clip musica;
+    
+    
+    
     public Signos() {
         initComponents();
         RedimencionarImagens();
@@ -1112,6 +1122,54 @@ public class Signos extends javax.swing.JFrame {
    
    }// fim do calcilar compatibilidade
    
+   public void TocarMusica() {
+    try {//um if e else para erros. o try manda o erro pra o catch
+        // Se a música já foi carregada, continuar a reprodução
+        if (musica != null && musica.isOpen()) {
+            musica.start();
+            return;
+        }
+
+        // Localizar o arquivo dentro do projeto
+        java.net.URL arquivo = getClass().getResource("/musica/wuji.wav");
+
+        if (arquivo == null) {
+            JOptionPane.showMessageDialog(this, "Arquivo de música não encontrado!");
+            return;
+        }
+
+        // Abrir o áudio e carregar a música
+        try (AudioInputStream audio = AudioSystem.getAudioInputStream(arquivo)) {
+            musica = AudioSystem.getClip();
+            musica.open(audio);
+        }
+
+        // Iniciar a reprodução
+        musica.start();
+
+    } catch (Exception erro) {
+        JOptionPane.showMessageDialog(
+                this,
+                "Erro ao tocar a música: " + erro.getMessage()
+        );
+    }
+}// Fim do TocarMusica
+   
+   public void PausarMusica() {
+    if (musica != null && musica.isOpen()) {
+        // Pausar na posição atual
+        musica.stop();
+    }
+}// Fim do PausarMusica
+
+public void PararMusica() {
+    if (musica != null && musica.isOpen()) {
+        // Parar e voltar ao início
+        musica.stop();
+        musica.setFramePosition(0);
+    }
+}// Fim do PararMusica
+   
    
 
     /**
@@ -1147,6 +1205,8 @@ public class Signos extends javax.swing.JFrame {
         compatibilidade = new javax.swing.JLabel();
         btnSigno = new javax.swing.JButton();
         tfCompatibilidade = new javax.swing.JTextField();
+        btnPlay = new javax.swing.JButton();
+        btnPause = new javax.swing.JButton();
         fundoInicio = new javax.swing.JLabel();
         aries = new javax.swing.JPanel();
         areaEnergia = new javax.swing.JPanel();
@@ -1862,6 +1922,7 @@ public class Signos extends javax.swing.JFrame {
         inicio.add(areaDescobrirSigno, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, -1, 290));
 
         areaResultado.setBackground(new java.awt.Color(87, 4, 4));
+        areaResultado.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         signo.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
         signo.setForeground(new java.awt.Color(255, 255, 255));
@@ -1876,6 +1937,21 @@ public class Signos extends javax.swing.JFrame {
         tfCompatibilidade.setBackground(new java.awt.Color(255, 255, 204));
         tfCompatibilidade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        btnPlay.setBackground(new java.awt.Color(255, 255, 204));
+        btnPlay.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
+        btnPlay.setText("Play");
+        btnPlay.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPlay.setPreferredSize(new java.awt.Dimension(76, 32));
+        btnPlay.addActionListener(this::btnPlayActionPerformed);
+
+        btnPause.setBackground(new java.awt.Color(255, 255, 204));
+        btnPause.setFont(new java.awt.Font("OCR A Extended", 1, 12)); // NOI18N
+        btnPause.setForeground(new java.awt.Color(0, 0, 0));
+        btnPause.setText("Pause");
+        btnPause.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPause.setPreferredSize(new java.awt.Dimension(76, 32));
+        btnPause.addActionListener(this::btnPauseActionPerformed);
+
         javax.swing.GroupLayout areaResultadoLayout = new javax.swing.GroupLayout(areaResultado);
         areaResultado.setLayout(areaResultadoLayout);
         areaResultadoLayout.setHorizontalGroup(
@@ -1887,14 +1963,21 @@ public class Signos extends javax.swing.JFrame {
                         .addComponent(signo))
                     .addGroup(areaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaResultadoLayout.createSequentialGroup()
+                            .addGap(37, 37, 37)
+                            .addComponent(compatibilidade))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaResultadoLayout.createSequentialGroup()
                             .addGap(20, 20, 20)
                             .addGroup(areaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(tfCompatibilidade, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(btnSigno, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaResultadoLayout.createSequentialGroup()
-                            .addGap(37, 37, 37)
-                            .addComponent(compatibilidade))))
-                .addContainerGap(22, Short.MAX_VALUE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaResultadoLayout.createSequentialGroup()
+                                    .addGap(0, 0, Short.MAX_VALUE)
+                                    .addComponent(btnPause, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(areaResultadoLayout.createSequentialGroup()
+                                    .addGroup(areaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(btnPlay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnSigno, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(0, 0, Short.MAX_VALUE))))))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         areaResultadoLayout.setVerticalGroup(
             areaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1906,11 +1989,15 @@ public class Signos extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(compatibilidade)
                 .addGap(18, 18, 18)
-                .addComponent(tfCompatibilidade, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addComponent(tfCompatibilidade, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(btnPlay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(btnPause, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
         );
 
-        inicio.add(areaResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 160, 210, 550));
+        inicio.add(areaResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 160, 210, 590));
 
         fundoInicio.setBackground(new java.awt.Color(87, 4, 4));
         fundoInicio.setForeground(new java.awt.Color(102, 102, 102));
@@ -2008,7 +2095,7 @@ public class Signos extends javax.swing.JFrame {
         areaInformacoes.setBackground(new java.awt.Color(87, 4, 4));
         areaInformacoes.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        imgSignoAries.setIcon(new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\Aries1.jpg")); // NOI18N
+        imgSignoAries.setIcon(new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\Aries.jpg")); // NOI18N
 
         tituloAries.setFont(new java.awt.Font("Viner Hand ITC", 1, 20)); // NOI18N
         tituloAries.setForeground(new java.awt.Color(255, 255, 255));
@@ -2083,7 +2170,7 @@ public class Signos extends javax.swing.JFrame {
                                         .addComponent(numeroAries)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(tfNumeroAries, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 32, Short.MAX_VALUE)))))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         areaInformacoesLayout.setVerticalGroup(
@@ -2644,7 +2731,7 @@ public class Signos extends javax.swing.JFrame {
         areaInformacoesGemeos.setBackground(new java.awt.Color(87, 4, 4));
         areaInformacoesGemeos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        imgSignoGemeos.setIcon(new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\gemini.jpg")); // NOI18N
+        imgSignoGemeos.setIcon(new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\gemeos.jpg")); // NOI18N
 
         tituloGemeos.setFont(new java.awt.Font("Viner Hand ITC", 1, 20)); // NOI18N
         tituloGemeos.setForeground(new java.awt.Color(255, 255, 255));
@@ -6376,6 +6463,16 @@ public class Signos extends javax.swing.JFrame {
         CalcularSigno();
     }//GEN-LAST:event_btnDescobrirSignoActionPerformed
 
+    private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
+        // TODO add your handling code here:
+        TocarMusica();
+    }//GEN-LAST:event_btnPlayActionPerformed
+
+    private void btnPauseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPauseActionPerformed
+        // TODO add your handling code here:
+        PausarMusica();
+    }//GEN-LAST:event_btnPauseActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -6505,6 +6602,8 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JButton btnCopiarMensagemTouro;
     private javax.swing.JButton btnCopiarMensagemVirgem;
     private javax.swing.JButton btnDescobrirSigno;
+    private javax.swing.JButton btnPause;
+    private javax.swing.JButton btnPlay;
     private javax.swing.JButton btnSigno;
     private javax.swing.JPanel cancer;
     private javax.swing.JPanel capricornio;
